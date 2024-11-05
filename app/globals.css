@@ -2,20 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: sans-serif;
+  /* padding: 20px; */
+}
+
+/* Base styles (for small screens) */
+.flashcards {
+  display: grid;
+  grid-template-columns: 1fr; /* Default to 1 column */
+  gap: 20px;
+}
+
+/* Flashcard item styles */
+.flashcards div {
+  border: 1px solid #e7e7e7;
+  background-color: #f7f7f7;
+  border-radius: 7px;
+  aspect-ratio: 2 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  cursor: pointer;
+}
+
+/* Selected state */
+div.selected {
+  border: 1px solid #0e0707;
+  background-color: #45e031;
+  color: black;
+  font-weight: bold;
+}
+
+/* Medium screens (tablets, around 768px) */
+@media (min-width: 768px) {
+  .flashcards {
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+  }
+}
+
+/* Large screens (desktops, around 1024px) */
+@media (min-width: 1024px) {
+  .flashcards {
+    grid-template-columns: 1fr 1fr 1fr; /* 3 columns */
+  }
 }
