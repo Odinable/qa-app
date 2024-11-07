@@ -154,7 +154,7 @@ const Cards = () => {
           onChange={(e) => setNewColor(e.target.value)}
         />
         <button
-          className="text-white bg-red-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center"
+          className="text-white bg-blue-800 hover:bg-blue-6   00 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center"
           type="submit"
         >
           Add Card
@@ -181,8 +181,10 @@ const Cards = () => {
           >
             <div className="absolute top-4 right-4">
               <FaTrash
-                className="hover:text-red-500 transitiona"
-                onClick={() => setshowModal(true)}
+                className="text-white hover:text-black transition-all icon-bg iconlg "
+                onClick={(e) => {
+                  setshowModal(true);
+                }}
               />
             </div>
 
