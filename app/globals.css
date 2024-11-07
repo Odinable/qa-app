@@ -19,7 +19,7 @@ body {
 }
 
 /* Flashcard item styles */
-.flashcards div {
+.flashcards .card {
   border: 1px solid #e7e7e7;
   background-color: #f7f7f7;
   border-radius: 7px;
@@ -30,8 +30,23 @@ body {
   text-align: center;
   padding: 20px;
   cursor: pointer;
+  /* box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.75); */
 }
 
+.flashcards .card:hover {
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.29);
+  transition: box-shadow 0.5s ease-in-out;
+  font-weight: 600;
+  border: 2px solid #ff0000;
+}
+
+.flashcards .card:hover p {
+  /* transition: box-shadow 0.5s ease-in-out; */
+  font-weight: 600;
+  /* background-color: bisque; */
+  /* transition: border 0.5s ease-in-out;
+  border: 1px solid #000000; */
+}
 /* Selected state */
 div.selected {
   border: 1px solid #0e0707;
