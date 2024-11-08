@@ -131,7 +131,7 @@ const Cards = () => {
           className="text-white bg-blue-800 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center"
           type="submit"
         >
-          Add Card
+          Add Card 1
         </button>
       </form>
 
