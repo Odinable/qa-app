@@ -4,8 +4,45 @@ import React, { useEffect, useState } from "react";
 import { FaTrash } from "react-icons/fa";
 import ConfirmationPopUp from "./ConfirmationPopUp";
 
-const initialQuestions = [
+const initialQuestions: any[] | (() => any[]) = [
   // Your initial questions array here
+  {
+    id: "1",
+    question: "What language is React based on?",
+    answer: "JavaScript",
+    color: "green",
+  },
+  {
+    id: "2",
+    question: "What are the building blocks of React apps?",
+    answer: "Components",
+    color: "brown",
+  },
+  {
+    id: "3",
+    question: "What's the name of the syntax we use to describe a UI in React?",
+    answer: "JSX",
+    color: "blue",
+  },
+  {
+    id: "4",
+    question: "How to pass data from parent to child components?",
+    answer: "Props",
+    color: "yellow",
+  },
+  {
+    id: "5",
+    question: "How to give components memory?",
+    answer: "useState hook",
+    color: "red",
+  },
+  {
+    id: "6",
+    question:
+      "What do we call an input element that is completely synchronized with state?",
+    answer: "Controlled element",
+    color: "purple",
+  },
 ];
 
 const Cards = () => {
@@ -39,15 +76,14 @@ const Cards = () => {
     setNewColor("");
     setShowUndo(false); // Hide undo after adding a new question
   };
+  useEffect(() => {
+    localStorage.setItem("questions", JSON.stringify(questions));
+  }, [questions]);
 
   useEffect(() => {
     const stored = localStorage.getItem("questions");
     if (stored) setQuestions(JSON.parse(stored));
   }, []);
-
-  useEffect(() => {
-    localStorage.setItem("questions", JSON.stringify(questions));
-  }, [questions]);
 
   const handleDelete = (id) => {
     setUndoQuestions(questions); // Save current state for undo
@@ -117,6 +153,7 @@ const Cards = () => {
           >
             <div className="absolute top-4 right-4">
               <FaTrash
+                fillRule="evenodd"
                 className="text-white hover:text-black transition-all icon-bg iconlg"
                 onClick={(e) => {
                   e.stopPropagation(); // Prevent click from affecting the card

@@ -5,7 +5,7 @@ const ConfirmationPopUp = ({ onYes, show, onNo }) => {
 
   return (
     <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50">
-      <div className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+      <div className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-md">
         <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left p-5">
           <h3
             className="text-base font-semibold text-gray-900"

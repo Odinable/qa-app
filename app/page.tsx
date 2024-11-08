@@ -1,6 +1,7 @@
 import Cards from "./components/Cards";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import Signin from "./components/Signin";
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
         <Cards />
       </div>
       <Footer />
+      {/* <Signin /> */}
     </div>
   );
 }
