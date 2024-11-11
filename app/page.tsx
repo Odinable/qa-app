@@ -6,12 +6,12 @@ import Signin from "./components/Signin";
 export default function App() {
   return (
     <div className="App">
-      <Navbar />
+      {/* <Navbar />
       <div className="pt-[90px] bg-[#1c2841]">
         <Cards />
       </div>
-      <Footer />
-      {/* <Signin /> */}
+      <Footer /> */}
+      <Signin />
     </div>
   );
 }

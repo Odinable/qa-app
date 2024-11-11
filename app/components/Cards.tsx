@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { FaTrash } from "react-icons/fa";
 import ConfirmationPopUp from "./ConfirmationPopUp";
+import Button from "./Button";
 
 const initialQuestions: any[] | (() => any[]) = [
   // Your initial questions array here
@@ -127,12 +128,9 @@ const Cards = () => {
           value={newColor}
           onChange={(e) => setNewColor(e.target.value)}
         />
-        <button
-          className="text-white bg-blue-800 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center"
-          type="submit"
-        >
-          Add Card 1
-        </button>
+        <div>
+          <Button />
+        </div>
       </form>
 
       <div className="flashcards p-6 pt-2 ">
